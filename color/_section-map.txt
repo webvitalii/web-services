@@ -1,0 +1,22 @@
++ index.php - About colors (info)
++ representation.php - Color representation (info)
++ names.php - Color names (info)
++ web-safe.php - Web safe colors (info)
+- calibration.php - Color calibration, white=>gray=>black (info)
+
++ rgb2hsl.php - RGB to HSL convert (service)
++ hsl2rgb.php - HSL to RGB convert (service)
++ rgb2hex.php - RGB to HEX convert (service)
++ hex2rgb.php - HEX to RGB convert (service)
+- template color clicker - (you choose few colors[bg-color, text-color, link-color...] and watch how it looks at preview template) (service)
+
++ rgb-clicker.php - RGB color clicker (service)
++ hsl-clicker.php - HSL color clicker (service)
++ gradient.php - Color gradient page, color1=>HSL=>color2 [color in N steps] (service)
+- create image.php with gradients (service)
+
+========= to do in future ============
+- few links(show/hide), which will works like tabs (mmm, tabs...)
+- add Google translate select
+- suggestion in color clicker (LIKE: this color is too white, choose less saturation)
+- in color clicker make submitting hex color value

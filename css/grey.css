@@ -1,0 +1,155 @@
+/* CSS Document [color] */
+
+/* change visited color (active and visited must have different colors) */
+
+
+* {margin:0; padding:0; font-family:Verdana, Tahoma, Helvetica, Arial, sans-serif; font-size:16px;}
+
+a img, a:link img, a:visited img {border:0;}
+q:before, q:after, blockquote:before, blockquote:after {content:"";}
+
+
+::selection {background:#000; color:#fff;}
+::-moz-selection {background:#000; color:#fff;}
+
+
+/* ===== fixing tags ===== */	
+nobr {white-space:normal;}
+marquee {overflow:visible; -moz-binding:none;}
+blink {text-decoration:none;}
+img {height:auto; vertical-align:center; width:auto;}
+
+
+/* ===== begin ===== */
+body, html {background:#808080; color:#fff; font-family:Verdana, Tahoma, Helvetica, Arial, sans-serif; font-size:16px; text-align:left; margin:0; padding:0; /* overflow:auto; */}
+
+
+/* ===== table, td ===== */
+table {border:0px solid #fff; 
+border-collapse:collapse; 
+border-spacing:0;
+background:#808080; 
+font-family:Verdana, Tahoma, Helvetica, Arial, sans-serif;
+font-size:16px;
+font-weight:normal;
+color:#fff;
+margin:10px; 
+padding:0;
+text-align:left;
+text-decoration:none;}
+
+td {border:0 dashed #eee;
+background:#808080;
+color:#fff;
+font-family:inherit;
+font-size:inherit;
+font-weight:inherit;
+margin:0;
+padding:4px;
+text-align:inherit;
+vertical-align:top;
+width:auto;}
+
+
+/* ===== links ===== */
+a:link {color:#eee; text-decoration:underline;}
+a:visited {color:#eee; text-decoration:underline;}
+a:hover {color:#ddd; text-decoration:none;}
+a:active {color:#ddd; text-decoration:none;}
+a {cursor:pointer;}
+
+
+/* ===== images ===== */
+img {border:1px solid #999900; margin:4px; padding:2px;}
+	a img {border:2px solid #999900; margin:4px; padding:4px;}
+		a:hover img {background:#d0d0ff;}
+
+/* ===== content ===== */
+#main {padding:10px; max-width:1000px; min-width:400px;}
+
+/* ===== color menu ===== */
+.menu ul {margin:0 0 10px 0; padding:0;}
+	.menu ul li {display:inline; list-style-type:none; margin:0; padding:0 4px 0 0;}
+		.menu ul li a, .menu ul li strong {white-space:nowrap;}
+
+/* ===== content ===== */
+	p {font-size:inherit; margin:12px 0; padding:0; text-indent:20px;}
+	ol {margin:10px 2px 16px 20px; padding:0 0 0 20px; list-style-type:decimal;}
+	ul {margin:10px 2px 16px 20px; padding:0 0 0 20px; list-style-type:disc;}
+	li {margin:0 0 0 5px; padding:0 0 0 5px;}
+	b, strong {font-weight:bold;}
+	i, em {font-style:normal; /*italic;*/ font-weight:bold;}
+	h1, h2 {clear:both; font-size:24px; font-weight:normal; margin:20px 0 10px 0; padding:0;}
+	h3, h4 {clear:both; font-size:20px; font-weight:normal; margin:0px 0 5px 0; padding:0;}
+	h5 {clear:both; font-size:16px; font-weight:bold; margin:0 0; padding:0;}
+	
+	
+/* ===== form inputs ===== */
+form {border:0; margin:0; padding:0;}
+fieldset {border:0; margin:0; padding:0;}
+/*input, select, textarea {height:auto; margin:1px; padding:1px; width:auto;}*/
+	
+	input {font-family:Verdana, Tahoma, Helvetica, Arial, sans-serif; font-size:16px; font-weight:normal;}
+		input.text, select.select {border:2px solid #555; text-align:center; margin:0 4px 0 2px; background:#fff; color:#000; -moz-border-radius:5px; -webkit-border-radius:5px; border-radius:5px; width:70px; font-size:24px; height:30px;}
+			input.small_width {width:60px;}
+			input.medium_width {width:140px;}
+			input.large_width {width:300px;}
+		
+			input.text:hover, input.text:focus, select.select:hover, select.select:focus {border-color:#ff0;}
+		
+		
+	label {cursor:pointer;}
+	
+	input.submit {background:transparent; color:#fff; /* cursor:pointer; */ font-weight:normal; font-size:20px; height:30px; width:120px; margin:5px 5px 0 5px; text-align:center; border:2px solid #fff; -moz-border-radius:10px; -webkit-border-radius:10px; border-radius:10px;}
+		input.submit:hover, input.submit:focus {background:#000; cursor:pointer;}
+
+	.label-radio input {height:14px; width:14px; line-height:14px; margin:0 0 0 -1px; padding:0; float:left; display:inline; background:transparent; cursor:pointer;}
+		.label-radio input:hover {cursor:pointer;}
+	
+	.label-radio label  {border:0; padding:0 8px 0 0; margin:0 2px 4px 1px; vertical-align:bottom; float:left; display:inline; height:14px; width:14px; line-height:14px; -moz-border-radius:4px; -webkit-border-radius:4px; border-radius:4px;}
+	
+
+/* .rgb-sample and .hsl-sample - are global classes, used in color functions */
+.rgb-sample, .hsl-sample {margin:0; padding:8px 10px; -moz-border-radius:5px; -webkit-border-radius:5px; border-radius:5px;}
+	.rgb-sample span, .hsl-sample span {white-space:nowrap; padding:1px 4px; -moz-border-radius:3px; -webkit-border-radius:3px; border-radius:3px;}
+
+/* .color-results - global class, used in long results */
+.color-results {padding:0 15px 1px 15px; margin:0 -10px;}
+	.color-results .hsl-sample {margin:0 0 15px 0;}
+
+.variations {}	
+	.variations .hsl-sample {margin:0;}
+
+
+table.websafetable  {border:0; border-collapse:separate; margin:0;}
+	table.websafetable  td {vertical-align:top; font-size:14px;}
+
+.js {border-bottom:1px dashed #fff; cursor:pointer; font-size:12px;}
+	.js:hover {border-bottom:0; cursor:pointer;}
+
+.footer {margin:20px 0 0 0;}
+
+
+
+.top-ad {
+	margin: 0 0 0 50px;
+}
+
+.float-ad {
+position:fixed;
+top:40px;
+right:5px;
+}
+* html .float-ad { /* ie6 hack */
+    display:none;
+}
+*+html .float-ad { /* ie7 hack */
+    display:none;
+}
+#page {
+/*margin-left: 0px;
+margin-right: 0px;*/
+}
+@media screen and (max-width: 1200px), screen and (max-device-width: 1200px) {
+	.float-ad {display:none;}
+}

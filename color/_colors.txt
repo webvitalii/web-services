@@ -1,0 +1,172 @@
+<?php
+substr("abcdef", 4, -4);
+$lines = file('colors.txt');
+
+// Loop through our array, show HTML source as HTML source; and line numbers too.
+foreach ($lines as $line_num => $line) {
+	$color = substr($line, 22, 7);
+	$name = substr($line, 64, -26);
+    echo '&lt;span style="background:'.$name.';"&gt;<span style="background:'.$name.';">'.$color.'</span>&lt;/span&gt;<br>'.chr(10);
+}
+// &lt;span style="background:#000000;"&gt;<span style="background:#000000;">black</span>&lt;/span&gt;<br>
+?>
+
+
+
+
+
+
+
+
+&lt;span style="color:#000000;"&gt;<span style="color:#000000;">black</span>&lt;/span&gt;<br>
+&lt;span style="color:#c0c0c0;"&gt;<span style="color:#c0c0c0;">silver</span>&lt;/span&gt;<br>
+&lt;span style="color:#808080;"&gt;<span style="color:#808080;">gray</span>&lt;/span&gt;<br>
+&lt;span style="color:#808080;"&gt;<span style="color:#808080;">grey</span>&lt;/span&gt;<br>
+&lt;span style="color:#ffffff;"&gt;<span style="color:#ffffff;">white</span>&lt;/span&gt;<br>
+&lt;span style="color:#800000;"&gt;<span style="color:#800000;">maroon</span>&lt;/span&gt;<br>
+&lt;span style="color:#ffA500;"&gt;<span style="color:#ffA500;">orange</span>&lt;/span&gt;<br>
+&lt;span style="color:#ff0000;"&gt;<span style="color:#ff0000;">red</span>&lt;/span&gt;<br>
+&lt;span style="color:#800080;"&gt;<span style="color:#800080;">purple</span>&lt;/span&gt;<br>
+&lt;span style="color:#ff00ff;"&gt;<span style="color:#ff00ff;">fuchsia</span>&lt;/span&gt;<br>
+&lt;span style="color:#008000;"&gt;<span style="color:#008000;">green</span>&lt;/span&gt;<br>
+&lt;span style="color:#00ff00;"&gt;<span style="color:#00ff00;">lime</span>&lt;/span&gt;<br>
+&lt;span style="color:#808000;"&gt;<span style="color:#808000;">olive</span>&lt;/span&gt;<br>
+&lt;span style="color:#ffff00;"&gt;<span style="color:#ffff00;">yellow</span>&lt;/span&gt;<br>
+&lt;span style="color:#000080;"&gt;<span style="color:#000080;">navy</span>&lt;/span&gt;<br>
+&lt;span style="color:#0000ff;"&gt;<span style="color:#0000ff;">blue</span>&lt;/span&gt;<br>
+&lt;span style="color:#008080;"&gt;<span style="color:#008080;">teal</span>&lt;/span&gt;<br>
+&lt;span style="color:#00ffff;"&gt;<span style="color:#00ffff;">aqua</span>&lt;/span&gt;<br>
+&lt;span style="color:#f0f8ff;"&gt;<span style="color:#f0f8ff;">aliceblue</span>&lt;/span&gt;<br>
+&lt;span style="color:#faebd7;"&gt;<span style="color:#faebd7;">antiquewhite</span>&lt;/span&gt;<br>
+&lt;span style="color:#7fffd4;"&gt;<span style="color:#7fffd4;">aquamarine</span>&lt;/span&gt;<br>
+&lt;span style="color:#f0ffff;"&gt;<span style="color:#f0ffff;">azure</span>&lt;/span&gt;<br>
+&lt;span style="color:#f5f5dc;"&gt;<span style="color:#f5f5dc;">beige</span>&lt;/span&gt;<br>
+&lt;span style="color:#ffe4c4;"&gt;<span style="color:#ffe4c4;">bisque</span>&lt;/span&gt;<br>
+&lt;span style="color:#ffebcd;"&gt;<span style="color:#ffebcd;">blanchedalmond</span>&lt;/span&gt;<br>
+&lt;span style="color:#8a2be2;"&gt;<span style="color:#8a2be2;">blueviolet</span>&lt;/span&gt;<br>
+&lt;span style="color:#a52a2a;"&gt;<span style="color:#a52a2a;">brown</span>&lt;/span&gt;<br>
+&lt;span style="color:#deb887;"&gt;<span style="color:#deb887;">burlywood</span>&lt;/span&gt;<br>
+&lt;span style="color:#5f9ea0;"&gt;<span style="color:#5f9ea0;">cadetblue</span>&lt;/span&gt;<br>
+&lt;span style="color:#7fff00;"&gt;<span style="color:#7fff00;">chartreuse</span>&lt;/span&gt;<br>
+&lt;span style="color:#d2691e;"&gt;<span style="color:#d2691e;">chocolate</span>&lt;/span&gt;<br>
+&lt;span style="color:#ff7f50;"&gt;<span style="color:#ff7f50;">coral</span>&lt;/span&gt;<br>
+&lt;span style="color:#6495ed;"&gt;<span style="color:#6495ed;">cornflowerblue</span>&lt;/span&gt;<br>
+&lt;span style="color:#fff8dc;"&gt;<span style="color:#fff8dc;">cornsilk</span>&lt;/span&gt;<br>
+&lt;span style="color:#dc143c;"&gt;<span style="color:#dc143c;">crimson</span>&lt;/span&gt;<br>
+&lt;span style="color:#00ffff;"&gt;<span style="color:#00ffff;">cyan</span>&lt;/span&gt;<br>
+&lt;span style="color:#00008b;"&gt;<span style="color:#00008b;">darkblue</span>&lt;/span&gt;<br>
+&lt;span style="color:#008b8b;"&gt;<span style="color:#008b8b;">darkcyan</span>&lt;/span&gt;<br>
+&lt;span style="color:#b8860b;"&gt;<span style="color:#b8860b;">darkgoldenrod</span>&lt;/span&gt;<br>
+&lt;span style="color:#a9a9a9;"&gt;<span style="color:#a9a9a9;">darkgray</span>&lt;/span&gt;<br>
+&lt;span style="color:#a9a9a9;"&gt;<span style="color:#a9a9a9;">darkgrey</span>&lt;/span&gt;<br>
+&lt;span style="color:#006400;"&gt;<span style="color:#006400;">darkgreen</span>&lt;/span&gt;<br>
+&lt;span style="color:#bdb76b;"&gt;<span style="color:#bdb76b;">darkkhaki</span>&lt;/span&gt;<br>
+&lt;span style="color:#8b008b;"&gt;<span style="color:#8b008b;">darkmagenta</span>&lt;/span&gt;<br>
+&lt;span style="color:#556b2f;"&gt;<span style="color:#556b2f;">darkolivegreen</span>&lt;/span&gt;<br>
+&lt;span style="color:#ff8c00;"&gt;<span style="color:#ff8c00;">darkorange</span>&lt;/span&gt;<br>
+&lt;span style="color:#9932cc;"&gt;<span style="color:#9932cc;">darkorchid</span>&lt;/span&gt;<br>
+&lt;span style="color:#8b0000;"&gt;<span style="color:#8b0000;">darkred</span>&lt;/span&gt;<br>
+&lt;span style="color:#e9967a;"&gt;<span style="color:#e9967a;">darksalmon</span>&lt;/span&gt;<br>
+&lt;span style="color:#8fbc8f;"&gt;<span style="color:#8fbc8f;">darkseagreen</span>&lt;/span&gt;<br>
+&lt;span style="color:#483d8b;"&gt;<span style="color:#483d8b;">darkslateblue</span>&lt;/span&gt;<br>
+&lt;span style="color:#2f4f4f;"&gt;<span style="color:#2f4f4f;">darkslategray</span>&lt;/span&gt;<br>
+&lt;span style="color:#2f4f4f;"&gt;<span style="color:#2f4f4f;">darkslategrey</span>&lt;/span&gt;<br>
+&lt;span style="color:#00ced1;"&gt;<span style="color:#00ced1;">darkturquoise</span>&lt;/span&gt;<br>
+&lt;span style="color:#9400d3;"&gt;<span style="color:#9400d3;">darkviolet</span>&lt;/span&gt;<br>
+&lt;span style="color:#ff1493;"&gt;<span style="color:#ff1493;">deeppink</span>&lt;/span&gt;<br>
+&lt;span style="color:#00bfff;"&gt;<span style="color:#00bfff;">deepskyblue</span>&lt;/span&gt;<br>
+&lt;span style="color:#696969;"&gt;<span style="color:#696969;">dimgray</span>&lt;/span&gt;<br>
+&lt;span style="color:#696969;"&gt;<span style="color:#696969;">dimgrey</span>&lt;/span&gt;<br>
+&lt;span style="color:#1e90ff;"&gt;<span style="color:#1e90ff;">dodgerblue</span>&lt;/span&gt;<br>
+&lt;span style="color:#b22222;"&gt;<span style="color:#b22222;">firebrick</span>&lt;/span&gt;<br>
+&lt;span style="color:#fffaf0;"&gt;<span style="color:#fffaf0;">floralwhite</span>&lt;/span&gt;<br>
+&lt;span style="color:#228b22;"&gt;<span style="color:#228b22;">forestgreen</span>&lt;/span&gt;<br>
+&lt;span style="color:#dcdcdc;"&gt;<span style="color:#dcdcdc;">gainsboro</span>&lt;/span&gt;<br>
+&lt;span style="color:#f8f8ff;"&gt;<span style="color:#f8f8ff;">ghostwhite</span>&lt;/span&gt;<br>
+&lt;span style="color:#ffd700;"&gt;<span style="color:#ffd700;">gold</span>&lt;/span&gt;<br>
+&lt;span style="color:#daa520;"&gt;<span style="color:#daa520;">goldenrod</span>&lt;/span&gt;<br>
+&lt;span style="color:#adff2f;"&gt;<span style="color:#adff2f;">greenyellow</span>&lt;/span&gt;<br>
+&lt;span style="color:#f0fff0;"&gt;<span style="color:#f0fff0;">honeydew</span>&lt;/span&gt;<br>
+&lt;span style="color:#ff69b4;"&gt;<span style="color:#ff69b4;">hotpink</span>&lt;/span&gt;<br>
+&lt;span style="color:#cd5c5c;"&gt;<span style="color:#cd5c5c;">indianred</span>&lt;/span&gt;<br>
+&lt;span style="color:#4b0082;"&gt;<span style="color:#4b0082;">indigo</span>&lt;/span&gt;<br>
+&lt;span style="color:#fffff0;"&gt;<span style="color:#fffff0;">ivory</span>&lt;/span&gt;<br>
+&lt;span style="color:#f0e68c;"&gt;<span style="color:#f0e68c;">khaki</span>&lt;/span&gt;<br>
+&lt;span style="color:#e6e6fa;"&gt;<span style="color:#e6e6fa;">lavender</span>&lt;/span&gt;<br>
+&lt;span style="color:#fff0f5;"&gt;<span style="color:#fff0f5;">lavenderblush</span>&lt;/span&gt;<br>
+&lt;span style="color:#7cfc00;"&gt;<span style="color:#7cfc00;">lawngreen</span>&lt;/span&gt;<br>
+&lt;span style="color:#fffacd;"&gt;<span style="color:#fffacd;">lemonchiffon</span>&lt;/span&gt;<br>
+&lt;span style="color:#add8e6;"&gt;<span style="color:#add8e6;">lightblue</span>&lt;/span&gt;<br>
+&lt;span style="color:#f08080;"&gt;<span style="color:#f08080;">lightcoral</span>&lt;/span&gt;<br>
+&lt;span style="color:#e0ffff;"&gt;<span style="color:#e0ffff;">lightcyan</span>&lt;/span&gt;<br>
+&lt;span style="color:#fafad2;"&gt;<span style="color:#fafad2;">lightgoldenrodyellow</span>&lt;/span&gt;<br>
+&lt;span style="color:#d3d3d3;"&gt;<span style="color:#d3d3d3;">lightgray</span>&lt;/span&gt;<br>
+&lt;span style="color:#d3d3d3;"&gt;<span style="color:#d3d3d3;">lightgrey</span>&lt;/span&gt;<br>
+&lt;span style="color:#90ee90;"&gt;<span style="color:#90ee90;">lightgreen</span>&lt;/span&gt;<br>
+&lt;span style="color:#ffb6c1;"&gt;<span style="color:#ffb6c1;">lightpink</span>&lt;/span&gt;<br>
+&lt;span style="color:#ffa07a;"&gt;<span style="color:#ffa07a;">lightsalmon</span>&lt;/span&gt;<br>
+&lt;span style="color:#20b2aa;"&gt;<span style="color:#20b2aa;">lightseagreen</span>&lt;/span&gt;<br>
+&lt;span style="color:#87cefa;"&gt;<span style="color:#87cefa;">lightskyblue</span>&lt;/span&gt;<br>
+&lt;span style="color:#778899;"&gt;<span style="color:#778899;">lightslategray</span>&lt;/span&gt;<br>
+&lt;span style="color:#778899;"&gt;<span style="color:#778899;">lightslategrey</span>&lt;/span&gt;<br>
+&lt;span style="color:#b0c4de;"&gt;<span style="color:#b0c4de;">lightsteelblue</span>&lt;/span&gt;<br>
+&lt;span style="color:#ffffe0;"&gt;<span style="color:#ffffe0;">lightyellow</span>&lt;/span&gt;<br>
+&lt;span style="color:#00ff00;"&gt;<span style="color:#00ff00;">lime</span>&lt;/span&gt;<br>
+&lt;span style="color:#32cd32;"&gt;<span style="color:#32cd32;">limegreen</span>&lt;/span&gt;<br>
+&lt;span style="color:#faf0e6;"&gt;<span style="color:#faf0e6;">linen</span>&lt;/span&gt;<br>
+&lt;span style="color:#ff00ff;"&gt;<span style="color:#ff00ff;">magenta</span>&lt;/span&gt;<br>
+&lt;span style="color:#66cdaa;"&gt;<span style="color:#66cdaa;">mediumaquamarine</span>&lt;/span&gt;<br>
+&lt;span style="color:#0000cd;"&gt;<span style="color:#0000cd;">mediumblue</span>&lt;/span&gt;<br>
+&lt;span style="color:#ba55d3;"&gt;<span style="color:#ba55d3;">mediumorchid</span>&lt;/span&gt;<br>
+&lt;span style="color:#9370db;"&gt;<span style="color:#9370db;">mediumpurple</span>&lt;/span&gt;<br>
+&lt;span style="color:#3cb371;"&gt;<span style="color:#3cb371;">mediumseagreen</span>&lt;/span&gt;<br>
+&lt;span style="color:#7b68ee;"&gt;<span style="color:#7b68ee;">mediumslateblue</span>&lt;/span&gt;<br>
+&lt;span style="color:#00fa9a;"&gt;<span style="color:#00fa9a;">mediumspringgreen</span>&lt;/span&gt;<br>
+&lt;span style="color:#48d1cc;"&gt;<span style="color:#48d1cc;">mediumturquoise</span>&lt;/span&gt;<br>
+&lt;span style="color:#c71585;"&gt;<span style="color:#c71585;">mediumvioletred</span>&lt;/span&gt;<br>
+&lt;span style="color:#191970;"&gt;<span style="color:#191970;">midnightblue</span>&lt;/span&gt;<br>
+&lt;span style="color:#f5fffa;"&gt;<span style="color:#f5fffa;">mintcream</span>&lt;/span&gt;<br>
+&lt;span style="color:#ffe4e1;"&gt;<span style="color:#ffe4e1;">mistyrose</span>&lt;/span&gt;<br>
+&lt;span style="color:#ffe4b5;"&gt;<span style="color:#ffe4b5;">moccasin</span>&lt;/span&gt;<br>
+&lt;span style="color:#ffdead;"&gt;<span style="color:#ffdead;">navajowhite</span>&lt;/span&gt;<br>
+&lt;span style="color:#fdf5e6;"&gt;<span style="color:#fdf5e6;">oldlace</span>&lt;/span&gt;<br>
+&lt;span style="color:#6b8e23;"&gt;<span style="color:#6b8e23;">olivedrab</span>&lt;/span&gt;<br>
+&lt;span style="color:#ffa500;"&gt;<span style="color:#ffa500;">orange</span>&lt;/span&gt;<br>
+&lt;span style="color:#ff4500;"&gt;<span style="color:#ff4500;">orangered</span>&lt;/span&gt;<br>
+&lt;span style="color:#da70d6;"&gt;<span style="color:#da70d6;">orchid</span>&lt;/span&gt;<br>
+&lt;span style="color:#eee8aa;"&gt;<span style="color:#eee8aa;">palegoldenrod</span>&lt;/span&gt;<br>
+&lt;span style="color:#98fb98;"&gt;<span style="color:#98fb98;">palegreen</span>&lt;/span&gt;<br>
+&lt;span style="color:#afeeee;"&gt;<span style="color:#afeeee;">paleturquoise</span>&lt;/span&gt;<br>
+&lt;span style="color:#db7093;"&gt;<span style="color:#db7093;">palevioletred</span>&lt;/span&gt;<br>
+&lt;span style="color:#ffefd5;"&gt;<span style="color:#ffefd5;">papayawhip</span>&lt;/span&gt;<br>
+&lt;span style="color:#ffdab9;"&gt;<span style="color:#ffdab9;">peachpuff</span>&lt;/span&gt;<br>
+&lt;span style="color:#cd853f;"&gt;<span style="color:#cd853f;">peru</span>&lt;/span&gt;<br>
+&lt;span style="color:#ffc0cb;"&gt;<span style="color:#ffc0cb;">pink</span>&lt;/span&gt;<br>
+&lt;span style="color:#dda0dd;"&gt;<span style="color:#dda0dd;">plum</span>&lt;/span&gt;<br>
+&lt;span style="color:#b0e0e6;"&gt;<span style="color:#b0e0e6;">powderblue</span>&lt;/span&gt;<br>
+&lt;span style="color:#800080;"&gt;<span style="color:#800080;">purple</span>&lt;/span&gt;<br>
+&lt;span style="color:#ff0000;"&gt;<span style="color:#ff0000;">red</span>&lt;/span&gt;<br>
+&lt;span style="color:#bc8f8f;"&gt;<span style="color:#bc8f8f;">rosybrown</span>&lt;/span&gt;<br>
+&lt;span style="color:#4169e1;"&gt;<span style="color:#4169e1;">royalblue</span>&lt;/span&gt;<br>
+&lt;span style="color:#8b4513;"&gt;<span style="color:#8b4513;">saddlebrown</span>&lt;/span&gt;<br>
+&lt;span style="color:#fa8072;"&gt;<span style="color:#fa8072;">salmon</span>&lt;/span&gt;<br>
+&lt;span style="color:#f4a460;"&gt;<span style="color:#f4a460;">sandybrown</span>&lt;/span&gt;<br>
+&lt;span style="color:#2e8b57;"&gt;<span style="color:#2e8b57;">seagreen</span>&lt;/span&gt;<br>
+&lt;span style="color:#fff5ee;"&gt;<span style="color:#fff5ee;">seashell</span>&lt;/span&gt;<br>
+&lt;span style="color:#a0522d;"&gt;<span style="color:#a0522d;">sienna</span>&lt;/span&gt;<br>
+&lt;span style="color:#c0c0c0;"&gt;<span style="color:#c0c0c0;">silver</span>&lt;/span&gt;<br>
+&lt;span style="color:#87ceeb;"&gt;<span style="color:#87ceeb;">skyblue</span>&lt;/span&gt;<br>
+&lt;span style="color:#6a5acd;"&gt;<span style="color:#6a5acd;">slateblue</span>&lt;/span&gt;<br>
+&lt;span style="color:#708090;"&gt;<span style="color:#708090;">slategray</span>&lt;/span&gt;<br>
+&lt;span style="color:#708090;"&gt;<span style="color:#708090;">slategrey</span>&lt;/span&gt;<br>
+&lt;span style="color:#fffafa;"&gt;<span style="color:#fffafa;">snow</span>&lt;/span&gt;<br>
+&lt;span style="color:#00ff7f;"&gt;<span style="color:#00ff7f;">springgreen</span>&lt;/span&gt;<br>
+&lt;span style="color:#4682b4;"&gt;<span style="color:#4682b4;">steelblue</span>&lt;/span&gt;<br>
+&lt;span style="color:#d2b48c;"&gt;<span style="color:#d2b48c;">tan</span>&lt;/span&gt;<br>
+&lt;span style="color:#d8bfd8;"&gt;<span style="color:#d8bfd8;">thistle</span>&lt;/span&gt;<br>
+&lt;span style="color:#ff6347;"&gt;<span style="color:#ff6347;">tomato</span>&lt;/span&gt;<br>
+&lt;span style="color:#40e0d0;"&gt;<span style="color:#40e0d0;">turquoise</span>&lt;/span&gt;<br>
+&lt;span style="color:#ee82ee;"&gt;<span style="color:#ee82ee;">violet</span>&lt;/span&gt;<br>
+&lt;span style="color:#f5deb3;"&gt;<span style="color:#f5deb3;">wheat</span>&lt;/span&gt;<br>
+&lt;span style="color:#f5f5f5;"&gt;<span style="color:#f5f5f5;">whitesmoke</span>&lt;/span&gt;<br>
+&lt;span style="color:#9acd32;"&gt;<span style="color:#9acd32;">yellowgreen</span>&lt;/span&gt;<br>

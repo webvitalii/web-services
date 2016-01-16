@@ -1,0 +1,80 @@
+<?php 
+include_once '../include.php'; 
+doctype();
+//<title>HSL to RGB convert</title>';
+?>
+<html>
+<head>
+	<?php head(); ?>
+	<?php color_head(); ?>
+</head>
+
+<body>
+
+
+<div id="main">
+		
+
+<?php 
+	//menu(); 
+	include_once '_menu.php';
+?>
+
+	
+<?php
+
+// randomize
+	$rand_h = rand(0,359);
+	$rand_s = rand(0,40)+50;
+	$rand_l = rand(0,20)+40;
+	$rand_rgb = hsl2rgb($rand_h,$rand_s,$rand_l);
+	$rand = rgb2hex($rand_rgb[0],$rand_rgb[1],$rand_rgb[2]);
+	$bgrand = readable_color($rand_rgb[0],$rand_rgb[1],$rand_rgb[2]);
+?>
+	<h2>Convert HSL to RGB</h2>
+	<p>You can convert color from HSL to RGB and from HSL to Hex or just click <?php echo random_link_hsl(); ?>.</p>
+
+<?php 
+
+	
+ 	if ((isset($_GET['h'])) && (isset($_GET['s'])) && (isset($_GET['l']))) {
+		$h = $_GET['h'];
+		$s = $_GET['s'];
+		$l = $_GET['l'];
+		hsl_sample($h,$s,$l,'Basic color');
+	}
+
+?>
+
+<script>
+jQuery(function($){
+	$('.js-form-color').attr('action', '<?php echo basename(__FILE__);?>');
+});
+</script>
+		
+	<form class="js-form-color" id="color" name="color" method="get" action="form.html" enctype="multipart/form-data"><fieldset>
+
+		<table>
+			<tr>
+				<td>HSL color</td>
+				<td>
+					<label>H<input class="text small_width" type="text" name="h" <?php if(isset($h)){echo 'value="'.$h.'"';} ?> title="0-359" maxlength="3" >&deg;</label> &nbsp;&nbsp;
+					<label>S<input class="text small_width" type="text" name="s" <?php if(isset($s)){echo 'value="'.$s.'"';} ?> title="0-100" maxlength="3" >%</label> &nbsp;&nbsp;
+					<label>L<input class="text small_width" type="text" name="l" <?php if(isset($l)){echo 'value="'.$l.'"';} ?> title="0-100" maxlength="3" >%</label>
+				</td>
+			</tr>
+			<tr>
+				<td>&nbsp;</td>
+				<td><input type="submit" name="color" class="submit" value="Convert" /></td>
+			</tr>
+		</table>
+			
+
+	</fieldset></form>
+
+	<?php footer(); ?>
+	
+</div>
+
+</body>
+</html>
