@@ -8,10 +8,10 @@ function color_head(){
 ?>
 
 <!-- color head include begin -->
-	<script src="/_files/js/color.js" type="text/javascript"></script>
+	<script src="../js/color.js" type="text/javascript"></script>
 	
-	<script src="/_files/farbtastic/farbtastic.js" type="text/javascript"></script>
-	<link href="/_files/farbtastic/farbtastic.css" rel="stylesheet" type="text/css" />
+	<script src="../farbtastic/farbtastic.js" type="text/javascript"></script>
+	<link href="../farbtastic/farbtastic.css" rel="stylesheet" type="text/css" />
 <!-- color head include end -->
 	
 <?php }

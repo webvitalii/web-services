@@ -20,9 +20,9 @@ $title = title($filename);
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	
 	<script src="../js/jquery.js"></script>
-	<script src="../js/jquery-ui/js/jquery-ui.js"></script>
+	<script src="../js/jquery-ui/jquery-ui.js"></script>
 	
-	<link href="../js/jquery-ui/css/smoothness/jquery-ui.css" rel="stylesheet" />
+	<link href="../js/jquery-ui/jquery-ui.css" rel="stylesheet" />
 	
 	<link href="../css/grey.css" rel="stylesheet" />
 	
