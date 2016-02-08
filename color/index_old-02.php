@@ -2,9 +2,12 @@
 include_once '../include.php';
 //doctype();
 //<title>Color wheel clicker</title>
-
-include '../inc/_header.php';
 ?>
+<html>
+<head>
+
+	<?php head(); ?>
+	<?php color_head(); ?>
 
  
  
@@ -176,13 +179,15 @@ include '../inc/_header.php';
 	
   });
  </script>
+</head>
+<body>
+<div id="main">
+
 
 <?php 
 	//menu(); 
 	include_once '_menu.php';
 ?>
-
-<div class="fx-box-3">
 
 	<h2>Color clicker</h2>
 	<p>You can choose background color, text color and link color. Click on input with color which you want to change and choose new color on color wheel or just click <a href="<?php echo basename(__FILE__);?>" rel="nofollow">random colors</a>.</p>
@@ -248,13 +253,9 @@ Background, text, and <a href="../" style="color:<?php echo $linkcolor; ?>;" rel
 Background, text, and <a href="../" style="color:<?php echo $linkcolor; ?>;" rel="nofollow">hyperlink</a> color.
 </strong></p>
 
-</div><!-- .fx-box -->
-
-<?php
-include '../inc/_sidebar.php';
-?>
-
+	<?php footer(); ?>
 	
-<?php
-include '../inc/_footer.php';
-?>
+</div>
+
+</body>
+</html>
