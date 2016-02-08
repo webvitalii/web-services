@@ -1,6 +1,5 @@
 
 
-	</div><!-- .fx-grid -->
 
 	<div class="site-footer">
 		<a href="http://www.web-profile.com.ua/" title="Web-profile">web-profile</a> |

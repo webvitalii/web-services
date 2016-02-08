@@ -383,6 +383,10 @@ template {
 
 /* ---------- grid - cols ---------- */
 
+.fx-col {
+	padding: 15px;
+}
+
 .fx-col-1, .fx-col-2, .fx-col-3, .fx-col-4, .fx-col-5, .fx-col-6,
 .fx-col-7, .fx-col-8, .fx-col-9, .fx-col-10, .fx-col-11, .fx-col-12 {
 	float: left;
@@ -658,6 +662,10 @@ template {
 }
 
 /* ---------- grid - flexible - cols ---------- */
+
+.fx-box {
+	padding: 15px;
+}
 
 .fx-box-1, .fx-box-2, .fx-box-3, .fx-box-4, .fx-box-5, .fx-box-6,
 .fx-box-7, .fx-box-8, .fx-box-9, .fx-box-10, .fx-box-11, .fx-box-12 {

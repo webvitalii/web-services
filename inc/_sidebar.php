@@ -1,5 +1,5 @@
 
-<div class="fx-box-1">
+<div class="fx-box fx-box-1">
 
 	sidebar
 
