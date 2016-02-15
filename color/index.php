@@ -49,7 +49,7 @@ jQuery(function($){ // document.ready and noConflict mode
 
 <div class="fx-grid">
 
-	<div class="fx-box fx-box-3">
+	<div class="fx-p-a fx-box-3">
 
 		<h1>Color clicker</h1>
 		
