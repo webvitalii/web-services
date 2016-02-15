@@ -9,39 +9,36 @@ include '../inc/_header.php';
 <script type="text/javascript">
 jQuery(function($){ // document.ready and noConflict mode
 
-	$('.js-bg-color').iris();
+	$('.js-bg-color').iris({
+		hide: false,
+		palettes: true,
+		change: function(event, ui) {
+			// event = standard jQuery event, produced by whichever control was changed.
+			// ui = standard jQuery UI object, with a color member containing a Color.js object
+			$('.js-color-demo').css( 'background-color', ui.color.toString());
+		}
+    });
 	
-	$('.js-color').iris();
+	$('.js-color').iris({
+		hide: false,
+		palettes: true,
+		change: function(event, ui) {
+			// event = standard jQuery event, produced by whichever control was changed.
+			// ui = standard jQuery UI object, with a color member containing a Color.js object
+			$('.js-color-demo').css( 'color', ui.color.toString());
+		}
+    });
 	
-	$('.js-link-color').iris();
-
-
-	var hh = 0.5;
-	var ss = 0.5;
-	var ll = 0.5;
-
-	$.farbtastic('#picker').setHSL([hh, ss, ll]);
+	$('.js-link-color').iris({
+		hide: false,
+		palettes: true,
+		change: function(event, ui) {
+			// event = standard jQuery event, produced by whichever control was changed.
+			// ui = standard jQuery UI object, with a color member containing a Color.js object
+			$('.js-color-demo a').css( 'color', ui.color.toString());
+		}
+    });
 	
-	function farbcolor(idclass) {
-		$(idclass).css('background-color', f.color);
-		$(idclass).attr('value', f.color);
-		$(idclass).css({'color': f.hsl[2] > 0.5 ? '#000' : '#fff'});
-		$(idclass).next().empty().prepend('hsl(' + Math.round(f.hsl[0]*360)+',' + Math.round(f.hsl[1]*100)+'%,' + Math.round(f.hsl[2]*100) + '%)');
-	}
-	
-	var f = $.farbtastic('#picker');
-	//var thisss = $(this);
-	
-	if($('#bgcolor').val()){
-		$('.js-color-demo').css('background-color', $('#bgcolor').val());
-	}
-	if($('#color').val()){
-		$('.js-color-demo').css('color', $('#color').val());
-	}
-	if($('#linkcolor').val()){
-		$('.js-color-demo a').css('color', $('#linkcolor').val());
-	}
-
 });
 </script>
 
@@ -76,6 +73,13 @@ jQuery(function($){ // document.ready and noConflict mode
 				<td>Background color:</td>
 				<td><input type="text" style="background:<?php echo $bgcolor; ?>" class="js-bg-color text medium_width" value="<?php echo $bgcolor; ?>" />
 				</td>
+				<td rowspan="3">
+					<p class="js-color-demo" style="padding:10px; background-color:<?php echo $bgcolor; ?>; color:<?php echo $textcolor; ?>;"><strong>
+					Background, text, and <a href="../" style="color:<?php echo $linkcolor; ?>;" rel="nofollow">hyperlink</a> color.
+					Background, text, and <a href="../" style="color:<?php echo $linkcolor; ?>;" rel="nofollow">hyperlink</a> color.
+					Background, text, and <a href="../" style="color:<?php echo $linkcolor; ?>;" rel="nofollow">hyperlink</a> color.
+					</strong></p>
+				</td>
 			</tr>
 			
 			<tr>
@@ -92,11 +96,7 @@ jQuery(function($){ // document.ready and noConflict mode
 		</table>
 
 		
-		<p class="js-color-demo" style="padding:10px; background-color:<?php echo $bgcolor; ?>; color:<?php echo $textcolor; ?>;"><strong>
-		Background, text, and <a href="../" style="color:<?php echo $linkcolor; ?>;" rel="nofollow">hyperlink</a> color.
-		Background, text, and <a href="../" style="color:<?php echo $linkcolor; ?>;" rel="nofollow">hyperlink</a> color.
-		Background, text, and <a href="../" style="color:<?php echo $linkcolor; ?>;" rel="nofollow">hyperlink</a> color.
-		</strong></p>
+		
 
 	</div><!-- .fx-box -->
 
