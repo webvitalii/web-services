@@ -1,44 +1,20 @@
 <?php 
-include_once 'include.php';
-doctype();
-// <title>Web tools</title>
+include 'include.php';
 
-$path = pathinfo($_SERVER['SCRIPT_NAME']);
-$folder = $path['dirname'].'/';
-$filename = $path['basename'];
+include 'inc/_header_general.php';
+
+include 'inc/_wrap_before.php';
 ?>
-<html>
-<head>
-	<?php head(); ?>
-</head>
 
-<body>
-
-<div id="main">
-		
-	<h3>Menu</h3>
-	<div class="menu">
-
-		<ul class="menu">
-
-			<li><a href="color/" title="Color in Web">color tools</a></li>
-			<!--<li><a href="md5/" title="Get the md5 hash of a string">md5</a></li>-->
-			<!--<li><a href="info/" title="Information">Info</a></li>-->
-			<!--<li><a href="alert/" title="Javascript alerts">alerts</a></li>-->
-			<li><a href="word-generator/" title="Word generator">word generator</a></li>
-			<li><a href="monster/" title="Monster constructor">monsters</a></li>
-			
-		</ul>
-
-	</div>
 	
 	<h2>Web tools.</h2>
 	<p></p>
 
 
-	<?php footer(); ?>
-	
-</div>
+<?php
+include 'inc/_wrap_after.php';
 
-</body>
-</html>
+include 'inc/_sidebar.php';
+
+include 'inc/_footer.php';
+?>
