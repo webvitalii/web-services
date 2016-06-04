@@ -183,13 +183,13 @@ elseif ((!isset($_GET['mode2']) && ($_GET['h2']) && ($_GET['s2']) && ($_GET['l2'
 }
 ?>
 
-<script>
+<script type="text/javascript">
 jQuery(function($){
-	$('.js-form-color').attr('action', '<?php echo basename(__FILE__);?>');
+	$('.form-container').wrap('<fo'+'rm name="color" method="get" action="<?php echo basename(__FILE__); ?>"></fo'+'rm>');
 });
 </script>
 		
-	<form class="js-form-color" id="color" name="color" method="get" action="form.html">
+	<div class="form-container">
 
 		<table>
 			<tr>
@@ -272,7 +272,7 @@ jQuery(function($){
 				<td style="border-top:1px solid #fff;"><input type="submit" name="color" class="submit" value="Gradient" /></td>
 			</tr>
 		</table>
-	</form>
+	</div><!-- .form-container -->
 <?php 
 	
  	if (((isset($_GET['mode1'])) && (isset($_GET['mode2']))) || ($_GET['color']=='Gradient')) {

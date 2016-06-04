@@ -43,13 +43,13 @@ $bgrand = readable_color($rand_r,$rand_g,$rand_b);
 ?>
 	
 
-<script>
+<script type="text/javascript">
 jQuery(function($){
-	$('.js-form-color').attr('action', '<?php echo basename(__FILE__);?>');
+	$('.form-container').wrap('<fo'+'rm name="color" method="get" action="<?php echo basename(__FILE__); ?>"></fo'+'rm>');
 });
 </script>
-	
-	<form class="js-form-color" id="color" name="color" method="get" action="form.html">
+		
+	<div class="form-container">
 			
 			
 		<h3>Red (0-255)</h3>
@@ -107,7 +107,7 @@ jQuery(function($){
 		<div style="clear:both; float:none;">
 			<input type="submit" class="submit" name="color" value="Click" />
 		</div>
-	</form>
+	</div><!-- .form-container -->
 
 <!-- Complementary colors -->
 

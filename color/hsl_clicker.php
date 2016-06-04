@@ -42,13 +42,13 @@ $bgrand = readable_color($rand_rgb[0],$rand_rgb[1],$rand_rgb[2]);
 
 
 
-<script>
+<script type="text/javascript">
 jQuery(function($){
-	$('.js-form-color').attr('action', '<?php echo basename(__FILE__);?>');
+	$('.form-container').wrap('<fo'+'rm name="color" method="get" action="<?php echo basename(__FILE__); ?>"></fo'+'rm>');
 });
 </script>
 		
-	<form class="js-form-color" id="color" name="color" method="get" action="form.html">
+	<div class="form-container">
 
 		<h3>Hue (0-359)&deg; [choose your color] <span class="js color-hue-toggle"></span></h3>
 		<div class="color-hue">
@@ -106,7 +106,7 @@ jQuery(function($){
 		<div style="clear:both; float:none;">
 			<input type="submit" class="submit" name="color" value="Click" />
 		</div>
-	</form>
+	</div><!-- .form-container -->
 
 <!-- Complementary colors -->
 <?php

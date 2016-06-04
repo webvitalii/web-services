@@ -29,13 +29,13 @@ if ((isset($_GET['h'])) && (isset($_GET['s'])) && (isset($_GET['l']))) {
 }
 ?>
 
-<script>
+<script type="text/javascript">
 jQuery(function($){
-	$('.js-form-color').attr('action', '<?php echo basename(__FILE__);?>');
+	$('.form-container').wrap('<fo'+'rm name="color" method="get" action="<?php echo basename(__FILE__); ?>"></fo'+'rm>');
 });
 </script>
 		
-	<form class="js-form-color" id="color" name="color" method="get" action="form.html">
+	<div class="form-container">
 
 		<table>
 			<tr>
@@ -52,7 +52,7 @@ jQuery(function($){
 			</tr>
 		</table>
 
-	</form>
+	</div><!-- .form-container -->
 
 <?php
 include '../inc/_wrap_after.php';

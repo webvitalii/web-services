@@ -117,13 +117,13 @@ if (isset($_GET['s2'])) {
 } else {$h2 = 1000; /* hue radio will not be checked */ }
 ?>
 
-<script>
+<script type="text/javascript">
 jQuery(function($){
-	$('.js-form-color').attr('action', '<?php echo basename(__FILE__);?>');
+	$('.form-container').wrap('<fo'+'rm name="color" method="get" action="<?php echo basename(__FILE__); ?>"></fo'+'rm>');
 });
 </script>
 		
-	<form class="js-form-color" id="color" name="color" method="get" action="form.html">
+	<div class="form-container">
 
 		<table>
 			<tr>
@@ -190,7 +190,7 @@ jQuery(function($){
  	}
 ?>
 		
-	</form>
+	</div><!-- .form-container -->
 
 <?php
 include '../inc/_wrap_after.php';
