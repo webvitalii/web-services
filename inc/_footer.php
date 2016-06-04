@@ -4,8 +4,8 @@
 
 
 	<div class="site-footer">
-		<a href="//www.web-profile.net/" title="Web-profile">web-profile</a> |
-		<a href="//www.web-profile.net/web-services/" title="web-tools">web-services</a>
+		<a href="//web-profile.net/" title="Web-profile">web-profile</a> |
+		<a href="//web-profile.net/web-services/" title="web-tools">web-services</a>
 	</div>
 
 </div><!-- .fx-container -->
