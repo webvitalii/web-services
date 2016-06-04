@@ -15,7 +15,7 @@ jQuery(function($){ // document.ready and noConflict mode
 		change: function(event, ui) {
 			// event = standard jQuery event, produced by whichever control was changed.
 			// ui = standard jQuery UI object, with a color member containing a Color.js object
-			$('.color-from-action').css( 'background-color', ui.color.toString());
+			$('.color-from-action').css('background-color', ui.color.toString());
 		}
     });
 
@@ -25,7 +25,7 @@ jQuery(function($){ // document.ready and noConflict mode
 		change: function(event, ui) {
 			// event = standard jQuery event, produced by whichever control was changed.
 			// ui = standard jQuery UI object, with a color member containing a Color.js object
-			$('.color-to-action').css( 'background-color', ui.color.toString());
+			$('.color-to-action').css('background-color', ui.color.toString());
 		}
     });
 	
@@ -189,7 +189,7 @@ jQuery(function($){
 });
 </script>
 		
-	<form class="js-form-color" id="color" name="color" method="get" action="form.html" enctype="multipart/form-data">
+	<form class="js-form-color" id="color" name="color" method="get" action="form.html">
 
 		<table>
 			<tr>

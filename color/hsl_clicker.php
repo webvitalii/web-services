@@ -1,70 +1,55 @@
 <?php 
-include_once '../include.php';
-doctype();
-//<title>HSL color clicker</title>
+include '../include.php';
+
+include '../inc/_header.php';
+
+include '../inc/_wrap_before.php';
 ?>
-<html>
-<head>
-	<?php head(); ?>
-	<?php color_head(); ?>
-</head>
 
-<body>
 
-<div id="main">
 
 <?php 
-	// normalize h, s, l
-	if (isset($_GET['h']) && isset($_GET['s']) && isset($_GET['l'])) {
-		if ($_GET['h'] < 0) { $_GET['h'] = 0;} // wrong :(
-		if ($_GET['h'] > 359) { $_GET['h'] = 359;} // wrong :(
-		$h = $_GET['h'];
-		
-		if ($_GET['s'] < 0) { $_GET['s'] = 0;}
-		if ($_GET['s'] > 100) { $_GET['s'] = 100;}
-		$s = $_GET['s'];
-		
-		if ($_GET['l'] < 0) { $_GET['l'] = 0;}
-		if ($_GET['l'] > 100) { $_GET['l'] = 100;}
-		$l = $_GET['l'];
-	} else {
+// normalize h, s, l
+if (isset($_GET['h']) && isset($_GET['s']) && isset($_GET['l'])) {
+	if ($_GET['h'] < 0) { $_GET['h'] = 0;} // wrong :(
+	if ($_GET['h'] > 359) { $_GET['h'] = 359;} // wrong :(
+	$h = $_GET['h'];
+	
+	if ($_GET['s'] < 0) { $_GET['s'] = 0;}
+	if ($_GET['s'] > 100) { $_GET['s'] = 100;}
+	$s = $_GET['s'];
+	
+	if ($_GET['l'] < 0) { $_GET['l'] = 0;}
+	if ($_GET['l'] > 100) { $_GET['l'] = 100;}
+	$l = $_GET['l'];
+} else {
 // randomize if empty
-		$h = rand(0,359);
-		$s = rand(0,40)+50;
-		$l = rand(0,20)+40;
-	}
+	$h = rand(0,359);
+	$s = rand(0,40)+50;
+	$l = rand(0,20)+40;
+}
 // randomize
-	$rand_h = rand(0,359);
-	$rand_s = rand(0,40)+50;
-	$rand_l = rand(0,20)+40;
-	$rand_rgb = hsl2rgb($rand_h,$rand_s,$rand_l);
-	$rand = rgb2hex($rand_rgb[0],$rand_rgb[1],$rand_rgb[2]);
-	$bgrand = readable_color($rand_rgb[0],$rand_rgb[1],$rand_rgb[2]);
-
-?>
-		
-<?php 
-	//menu(); 
-	include_once '_menu.php';
+$rand_h = rand(0,359);
+$rand_s = rand(0,40)+50;
+$rand_l = rand(0,20)+40;
+$rand_rgb = hsl2rgb($rand_h,$rand_s,$rand_l);
+$rand = rgb2hex($rand_rgb[0],$rand_rgb[1],$rand_rgb[2]);
+$bgrand = readable_color($rand_rgb[0],$rand_rgb[1],$rand_rgb[2]);
 ?>
 	
 	<h2>Choose your color</h2>
 	<p>Here You can set color by changing hue, saturation and lightness and watch at complimentary colors at bottom of the page or just click <?php echo random_link_hsl(); ?>.</p>
 
-<?php
-	// hsl_sample($h,$s,$l,'Basic color'); 
-?>
-		
+
+
 <script>
 jQuery(function($){
 	$('.js-form-color').attr('action', '<?php echo basename(__FILE__);?>');
 });
 </script>
 		
-	<form class="js-form-color" id="color" name="color" method="get" action="form.html" enctype="multipart/form-data"><fieldset>
+	<form class="js-form-color" id="color" name="color" method="get" action="form.html">
 
-			
-			
 		<h3>Hue (0-359)&deg; [choose your color] <span class="js color-hue-toggle"></span></h3>
 		<div class="color-hue">
 			<div class="label-radio">
@@ -121,7 +106,7 @@ jQuery(function($){
 		<div style="clear:both; float:none;">
 			<input type="submit" class="submit" name="color" value="Click" />
 		</div>
-	</fieldset></form>
+	</form>
 
 <!-- Complementary colors -->
 <?php
@@ -160,9 +145,10 @@ jQuery(function($){
 	
 	</div>
 	
-	<?php footer(); ?>
-	
-</div>
+<?php
+include '../inc/_wrap_after.php';
 
-</body>
-</html>
+include '../inc/_sidebar.php';
+
+include '../inc/_footer.php';
+?>

@@ -1,24 +1,12 @@
 <?php 
-include_once '../include.php';
-doctype();
-//<title>Color names</title>
+include '../include.php';
+
+include '../inc/_header.php';
+
+include '../inc/_wrap_before.php';
 ?>
-<html>
-<head>
-	<?php head(); ?>
-	<?php color_head(); ?>
-</head>
 
-<body>
 
-<div id="main">
-
-<?php 
-	//menu(); 
-	include_once '_menu.php';
-?>
-			
-			
 <h3>Color names and RGB values</h3>
 <p>You can set color by color name. The color names are case-insensitive.</p>
 <div class="rgb-sample">
@@ -176,11 +164,14 @@ doctype();
 &lt;span style="background-color:wheat;"&gt;<span style="background-color:wheat;">#f5deb3</span>&lt;/span&gt;<br>
 &lt;span style="background-color:whitesmoke;"&gt;<span style="background-color:whitesmoke;">#f5f5f5</span>&lt;/span&gt;<br>
 &lt;span style="background-color:yellowgreen;"&gt;<span style="background-color:yellowgreen;">#9acd32</span>&lt;/span&gt;<br>
+</p>
 
-	</p>
-			</div>
-			
-	<?php footer(); ?>
 </div>
-</body>
-</html>
+
+<?php
+include '../inc/_wrap_after.php';
+
+include '../inc/_sidebar.php';
+
+include '../inc/_footer.php';
+?>

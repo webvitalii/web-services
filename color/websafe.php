@@ -1,21 +1,9 @@
 <?php 
-include_once '../include.php';
-doctype();
-//<title>Web safe color table</title>
-?>
-<html>
-<head>
-	<?php head(); ?>
-	<?php color_head(); ?>
-</head>
+include '../include.php';
 
-<body>
+include '../inc/_header.php';
 
-<div id="main">
-
-<?php 
-	//menu(); 
-	include_once '_menu.php';
+include '../inc/_wrap_before.php';
 ?>
 
 			<h3>Table of 216 web safe colors</h3>
@@ -65,9 +53,12 @@ for ($i = 0; $i <= 255; $i += 51) {
 echo '</tr>'.chr(10);
 ?>
 </table>
-		
-	<?php footer(); ?>
-</div>
 
-</body>
-</html>
+
+<?php
+include '../inc/_wrap_after.php';
+
+include '../inc/_sidebar.php';
+
+include '../inc/_footer.php';
+?>

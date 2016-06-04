@@ -1,52 +1,39 @@
 <?php 
-include_once '../include.php';
-doctype();
-//<title>RGB color clicker</title>
+include '../include.php';
+
+include '../inc/_header.php';
+
+include '../inc/_wrap_before.php';
 ?>
-<html>
-<head>
-	<?php head(); ?>
-	<?php color_head(); ?>
-</head>
-
-<body>
-
-<div id="main">
 
 <?php 
-	// normalize r, g, b
-	if (isset($_GET['r']) && isset($_GET['g']) && isset($_GET['b'])) {
-		if ($_GET['r'] < 0) { $_GET['r'] = 0;} 
-		if ($_GET['r'] > 255) { $_GET['r'] = 255;} 
-		$r = $_GET['r'];
-		
-		if ($_GET['g'] < 0) { $_GET['g'] = 0;}
-		if ($_GET['g'] > 255) { $_GET['g'] = 255;}
-		$g = $_GET['g'];
-		
-		if ($_GET['b'] < 0) { $_GET['b'] = 0;}
-		if ($_GET['b'] > 255) { $_GET['b'] = 255;}
-		$b = $_GET['b'];
-	} else {
+// normalize r, g, b
+if (isset($_GET['r']) && isset($_GET['g']) && isset($_GET['b'])) {
+	if ($_GET['r'] < 0) { $_GET['r'] = 0;} 
+	if ($_GET['r'] > 255) { $_GET['r'] = 255;} 
+	$r = $_GET['r'];
+	
+	if ($_GET['g'] < 0) { $_GET['g'] = 0;}
+	if ($_GET['g'] > 255) { $_GET['g'] = 255;}
+	$g = $_GET['g'];
+	
+	if ($_GET['b'] < 0) { $_GET['b'] = 0;}
+	if ($_GET['b'] > 255) { $_GET['b'] = 255;}
+	$b = $_GET['b'];
+} else {
 // randomize if empty
-		$r = rand(0,255);
-		$g = rand(0,255);
-		$b = rand(0,255);
-	}
+	$r = rand(0,255);
+	$g = rand(0,255);
+	$b = rand(0,255);
+}
 // randomize
-	$rand_r = rand(0,255);
-	$rand_g = rand(0,255);
-	$rand_b = rand(0,255);
-	$rand = rgb2hex($rand_r,$rand_g,$rand_b);
-	$bgrand = readable_color($rand_r,$rand_g,$rand_b);
-	
-	
+$rand_r = rand(0,255);
+$rand_g = rand(0,255);
+$rand_b = rand(0,255);
+$rand = rgb2hex($rand_r,$rand_g,$rand_b);
+$bgrand = readable_color($rand_r,$rand_g,$rand_b);
 ?>
-		
-<?php 
-	//menu(); 
-	include_once '_menu.php';
-?>
+
 
 	<h2>Choose your color</h2>
 	<p>Here You can set color in RGB color model and watch at complimentary colors at bottom of the page or just click <?php echo random_link_rgb(); ?>.</p>
@@ -62,7 +49,7 @@ jQuery(function($){
 });
 </script>
 	
-	<form class="js-form-color" id="color" name="color" method="get" action="form.html" enctype="multipart/form-data"><fieldset>
+	<form class="js-form-color" id="color" name="color" method="get" action="form.html">
 			
 			
 		<h3>Red (0-255)</h3>
@@ -120,52 +107,54 @@ jQuery(function($){
 		<div style="clear:both; float:none;">
 			<input type="submit" class="submit" name="color" value="Click" />
 		</div>
-	</fieldset></form>
+	</form>
 
 <!-- Complementary colors -->
 
 	<h3>Results</h3>
 <?php 
-	$hex = rgb2hex($r,$g,$b);
-	$hsl = rgb2hsl($r,$g,$b);
-	$h = $hsl[0];
-	$s = $hsl[1];
-	$l = $hsl[2];
-	$color = readable_color($r,$g,$b);
+$hex = rgb2hex($r,$g,$b);
+$hsl = rgb2hsl($r,$g,$b);
+$h = $hsl[0];
+$s = $hsl[1];
+$l = $hsl[2];
+$color = readable_color($r,$g,$b);
 ?>
 
 	<div class="color-results" style="<?php echo 'background-color:'.$hex.'; color:'.$color.';'; ?>">
 
 
 <?php 
-	rgb_sample($r,$g,$b,'Basic color'); 
+rgb_sample($r,$g,$b,'Basic color'); 
 ?>
 		<h3>Complementary colors:</h3>
 					
 <?php
-	hsl_sample($h+30,$s,$l,'Analogous harmony (H+30)'); 
-	hsl_sample($h-30,$s,$l,'Analogous harmony (H-30)'); 
- 
-	hsl_sample($h+120,$s,$l,'Triadic harmony (H+120)'); 
-	hsl_sample($h-120,$s,$l,'Triadic harmony (H-120)'); 
+hsl_sample($h+30,$s,$l,'Analogous harmony (H+30)'); 
+hsl_sample($h-30,$s,$l,'Analogous harmony (H-30)'); 
 
-	hsl_sample($h+150,$s,$l,'Split complements harmony (H+150)'); 
-	hsl_sample($h-150,$s,$l,'Split complements harmony (H-150)'); 
+hsl_sample($h+120,$s,$l,'Triadic harmony (H+120)'); 
+hsl_sample($h-120,$s,$l,'Triadic harmony (H-120)'); 
 
-	hsl_sample($h+180,$s,$l,'Complement harmony (H+180)'); 
+hsl_sample($h+150,$s,$l,'Split complements harmony (H+150)'); 
+hsl_sample($h-150,$s,$l,'Split complements harmony (H-150)'); 
 
-	hsl_sample($h,$s+30,$l,'Monochromatic harmony (S+30)'); 
-	hsl_sample($h,$s-30,$l,'Monochromatic harmony (S-30)'); 
+hsl_sample($h+180,$s,$l,'Complement harmony (H+180)'); 
 
-	hsl_sample($h,$s,$l+10,'Monochromatic harmony (L+10)'); 
-	hsl_sample($h,$s,$l-10,'Monochromatic harmony (L-10)'); 
+hsl_sample($h,$s+30,$l,'Monochromatic harmony (S+30)'); 
+hsl_sample($h,$s-30,$l,'Monochromatic harmony (S-30)'); 
+
+hsl_sample($h,$s,$l+10,'Monochromatic harmony (L+10)'); 
+hsl_sample($h,$s,$l-10,'Monochromatic harmony (L-10)'); 
 ?>
 
 	
 	</div>
 	
-	<?php footer(); ?>
-</div>
+<?php
+include '../inc/_wrap_after.php';
 
-</body>
-</html>
+include '../inc/_sidebar.php';
+
+include '../inc/_footer.php';
+?>

@@ -16,7 +16,7 @@ jQuery(function($){ // document.ready and noConflict mode
 		change: function(event, ui) {
 			// event = standard jQuery event, produced by whichever control was changed.
 			// ui = standard jQuery UI object, with a color member containing a Color.js object
-			$('.js-color-demo').css( 'background-color', ui.color.toString());
+			$('.js-color-demo').css('background-color', ui.color.toString());
 		}
     });
 	
@@ -26,7 +26,7 @@ jQuery(function($){ // document.ready and noConflict mode
 		change: function(event, ui) {
 			// event = standard jQuery event, produced by whichever control was changed.
 			// ui = standard jQuery UI object, with a color member containing a Color.js object
-			$('.js-color-demo').css( 'color', ui.color.toString());
+			$('.js-color-demo').css('color', ui.color.toString());
 		}
     });
 	
@@ -36,7 +36,7 @@ jQuery(function($){ // document.ready and noConflict mode
 		change: function(event, ui) {
 			// event = standard jQuery event, produced by whichever control was changed.
 			// ui = standard jQuery UI object, with a color member containing a Color.js object
-			$('.js-color-demo a').css( 'color', ui.color.toString());
+			$('.js-color-demo a').css('color', ui.color.toString());
 		}
     });
 	
@@ -50,15 +50,15 @@ jQuery(function($){ // document.ready and noConflict mode
 
 
 <?php 
- 	if ((isset($_GET['bgcolor'])) && (isset($_GET['textcolor'])) && (isset($_GET['linkcolor']))) {
-		$bgcolor = $_GET['bgcolor'];
-		$textcolor = $_GET['textcolor'];
-		$linkcolor = $_GET['linkcolor'];
-	} else {
-		$bgcolor = random_hex();
-		$textcolor = random_hex();
-		$linkcolor = random_hex();
-	}
+if ((isset($_GET['bgcolor'])) && (isset($_GET['textcolor'])) && (isset($_GET['linkcolor']))) {
+	$bgcolor = $_GET['bgcolor'];
+	$textcolor = $_GET['textcolor'];
+	$linkcolor = $_GET['linkcolor'];
+} else {
+	$bgcolor = random_hex();
+	$textcolor = random_hex();
+	$linkcolor = random_hex();
+}
 ?>
 	
 		<table>

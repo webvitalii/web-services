@@ -1,49 +1,32 @@
 <?php 
-include_once '../include.php'; 
-doctype();
-//<title>HSL to RGB convert</title>';
-?>
-<html>
-<head>
-	<?php head(); ?>
-	<?php color_head(); ?>
-</head>
+include '../include.php';
 
-<body>
+include '../inc/_header.php';
 
-
-<div id="main">
-		
-
-<?php 
-	//menu(); 
-	include_once '_menu.php';
+include '../inc/_wrap_before.php';
 ?>
 
 	
 <?php
-
 // randomize
-	$rand_h = rand(0,359);
-	$rand_s = rand(0,40)+50;
-	$rand_l = rand(0,20)+40;
-	$rand_rgb = hsl2rgb($rand_h,$rand_s,$rand_l);
-	$rand = rgb2hex($rand_rgb[0],$rand_rgb[1],$rand_rgb[2]);
-	$bgrand = readable_color($rand_rgb[0],$rand_rgb[1],$rand_rgb[2]);
+$rand_h = rand(0,359);
+$rand_s = rand(0,40)+50;
+$rand_l = rand(0,20)+40;
+$rand_rgb = hsl2rgb($rand_h,$rand_s,$rand_l);
+$rand = rgb2hex($rand_rgb[0],$rand_rgb[1],$rand_rgb[2]);
+$bgrand = readable_color($rand_rgb[0],$rand_rgb[1],$rand_rgb[2]);
 ?>
+
 	<h2>Convert HSL to RGB</h2>
 	<p>You can convert color from HSL to RGB and from HSL to Hex or just click <?php echo random_link_hsl(); ?>.</p>
 
-<?php 
-
-	
- 	if ((isset($_GET['h'])) && (isset($_GET['s'])) && (isset($_GET['l']))) {
-		$h = $_GET['h'];
-		$s = $_GET['s'];
-		$l = $_GET['l'];
-		hsl_sample($h,$s,$l,'Basic color');
-	}
-
+<?php
+if ((isset($_GET['h'])) && (isset($_GET['s'])) && (isset($_GET['l']))) {
+	$h = $_GET['h'];
+	$s = $_GET['s'];
+	$l = $_GET['l'];
+	hsl_sample($h,$s,$l,'Basic color');
+}
 ?>
 
 <script>
@@ -52,7 +35,7 @@ jQuery(function($){
 });
 </script>
 		
-	<form class="js-form-color" id="color" name="color" method="get" action="form.html" enctype="multipart/form-data"><fieldset>
+	<form class="js-form-color" id="color" name="color" method="get" action="form.html">
 
 		<table>
 			<tr>
@@ -68,13 +51,13 @@ jQuery(function($){
 				<td><input type="submit" name="color" class="submit" value="Convert" /></td>
 			</tr>
 		</table>
-			
 
-	</fieldset></form>
+	</form>
 
-	<?php footer(); ?>
-	
-</div>
+<?php
+include '../inc/_wrap_after.php';
 
-</body>
-</html>
+include '../inc/_sidebar.php';
+
+include '../inc/_footer.php';
+?>
