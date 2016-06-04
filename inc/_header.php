@@ -18,6 +18,12 @@
 
 <body class="fx-wrap">
 
+
+<?php
+	include_once '_menu_color.php';
+?>
+
+
 <div class="fx-container fx-container-lg">
 
-
+	<div class="fx-grid">

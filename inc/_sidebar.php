@@ -1,6 +1,6 @@
 
-<div class="fx-box fx-box-1">
+<aside class="fx-box-sm-3 fx-padding-all fx-bg-gray-lightest">
 
 	sidebar
 
-</div><!-- .fx-box -->
+</aside><!-- .fx-box -->

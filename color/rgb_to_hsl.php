@@ -9,65 +9,10 @@ doctype();
 	<?php head(); ?>
 	<?php color_head(); ?>
 	
-<script type="text/javascript" charset="utf-8">
-//	$(document).ready(function() {
-
-		// adding value by default
-		//if ($('#hexcolor')[0].getAttribute('value') == ''){
-		//	$('#hexcolor').attr('value', '#123456');
-		//};
-			
-//		$('#picker').farbtastic('#hexcolor');
-		
-		
-		
-/* 		$.farbtastic('#picker', function() {
-			$('#test').setColor('#123456');
-		}); */
-//	});
-	
+<script type="text/javascript">
 	$(document).ready(function() {
-
-		// adding value by default
-		//if ($('#hexcolor')[0].getAttribute('value') == ''){
-		//	$('#hexcolor').attr('value', '#123456');
-		//};
-			
 		$('#picker').farbtastic('#hexcolor');
-		//$('#picker').('#hexcolor').farbtastic();
-		//$('#hexcolor').farbtastic('#picker');
-		//Invoking $.farbtastic(placeholder) is the same as using $(placeholder).farbtastic()
-		
-		//$.farbtastic(placeholder)
-		//$.farbtastic(placeholder, callback)
-		
-		//$.farbtastic(placeholder)
-		//$(placeholder).farbtastic()
-		
-/* 		$.farbtastic('#picker', function() {
-			$('#test').setColor('#123456');
-		}); */
 	});
-	
-	
-	//setColor('#123456')
-	
-/* 	$(document).ready(function() {
-		var f = $.farbtastic('#picker2');
-		var p = $('#picker2').css('opacity', 0.25);
-		var selected;
-		$('.colorwell')
-		.each(function () { f.linkTo(this); $(this).css('opacity', 0.75); })
-		.focus(function() {
-			if (selected) {
-				$(selected).css('opacity', 0.75).removeClass('colorwell-selected');
-			}
-			f.linkTo(this);
-			p.css('opacity', 1);
-			$(selected = this).css('opacity', 1).addClass('colorwell-selected');
-		});
-	}); */
-	
 </script>
 	
 </head>

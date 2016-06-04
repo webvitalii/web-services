@@ -2,10 +2,11 @@
 include_once '../include.php';
 
 include '../inc/_header.php';
+
+include '../inc/_wrap_before.php';
 ?>
 
- 
- 
+
 <script type="text/javascript">
 jQuery(function($){ // document.ready and noConflict mode
 
@@ -42,14 +43,6 @@ jQuery(function($){ // document.ready and noConflict mode
 });
 </script>
 
-<?php 
-	//menu(); 
-	include_once '../inc/_menu_color.php';
-?>
-
-<div class="fx-grid">
-
-	<div class="fx-p-a fx-box-3">
 
 		<h1>Color clicker</h1>
 		
@@ -95,17 +88,11 @@ jQuery(function($){ // document.ready and noConflict mode
 			</tr>
 		</table>
 
-		
-		
-
-	</div><!-- .fx-box -->
 
 <?php
+include '../inc/_wrap_after.php';
+
 include '../inc/_sidebar.php';
-?>
 
-</div><!-- .fx-grid -->
-	
-<?php
 include '../inc/_footer.php';
 ?>
