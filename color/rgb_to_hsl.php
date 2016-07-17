@@ -4,6 +4,52 @@ include '../include.php';
 include '../inc/_header.php';
 
 include '../inc/_wrap_before.php';
+
+
+
+// debug spam - start
+$spam_debug_info = '';
+$rn = '<br>'; //"\r\n"; // .chr(13).chr(10)
+
+
+if($_POST || $_GET) {
+	
+	echo '<!-- post -->';
+	
+	$spam_debug_info .= 'IP: ' . $_SERVER['REMOTE_ADDR'] . $rn;
+	$spam_debug_info .= 'User agent: ' . $_SERVER['HTTP_USER_AGENT'] . $rn;
+	$spam_debug_info .= 'Referer: ' . $_SERVER['HTTP_REFERER'] . $rn.$rn;
+
+	$spam_debug_info .= 'Post vars:'.$rn; // lets see what POST vars spammers try to submit
+	foreach ($_POST as $key => $value) {
+		$spam_debug_info .= '$_POST['.$key. '] = '.$value.$rn;
+	}
+	$spam_debug_info .= $rn.$rn;
+	
+	$spam_debug_info .= 'Get vars:'.$rn; // lets see what GET vars spammers try to submit
+	foreach ($_GET as $key => $value) {
+		$spam_debug_info .= '$_GET['.$key. '] = '.$value.$rn;
+	}
+	$spam_debug_info .= $rn.$rn;
+
+	$spam_debug_info .= 'Cookie vars:'.$rn; // lets see what COOKIE vars spammers try to submit
+	foreach ($_COOKIE as $key => $value) {
+		$spam_debug_info .= '$_COOKIE['.$key. '] = '.$value.$rn;
+	}
+	$spam_debug_info .= $rn.$rn;
+
+	$spam_debug_info .= '-----------------------------'.$rn;
+	$spam_debug_info .= 'This is from submit - /color/rgb_to_hsl.php' . $rn;
+	
+	
+	$headers  = 'MIME-Version: 1.0' . "\r\n";
+	$headers .= 'Content-type: text/html; charset=utf-8' . "\r\n";
+	$headers .= 'From: Site <no-reply@site.com>' . "\r\n";
+	//mail('***@gmail.com', '[Spam debug info]', $spam_debug_info, $headers);
+	
+}
+// debug spam - end
+
 ?>
 
 
